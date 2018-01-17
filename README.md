@@ -1,6 +1,6 @@
 
 # simple-e
-Programa simple y sin abstracciones
+Programa de manera simple, rápida, robusta y al alcance de cualquiera
 
 ### Objetivo
 - Construir aplicaciones altamente escalables

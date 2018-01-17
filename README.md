@@ -1,5 +1,5 @@
 
-# simple-e
+# simple_
 Programa de manera simple, rápida, robusta y al alcance de cualquiera.
 
 ### Objetivo
@@ -20,7 +20,7 @@ Programa de manera simple, rápida, robusta y al alcance de cualquiera.
 - Vue2 (SPA)
 - require-vuejs, el 'glue' entre requirejs y vue https://github.com/edgardleal/require-vuejs
 
-### Que NO tiene simpl-e
+### Que NO tiene simple_
 - Descarga automática de librerías npm o bower
 - AMD's compilados como Webpack
 - Procesos ejecutables como grunt o gulp

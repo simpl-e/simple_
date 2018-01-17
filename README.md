@@ -1,10 +1,10 @@
 
 # simple-e
-Programa de manera simple, rápida, robusta y al alcance de cualquiera
+Programa de manera simple, rápida, robusta y al alcance de cualquiera.
 
 ### Objetivo
 - Construir aplicaciones altamente escalables
-- Programaraplicaciones 100% responsivas "mobile first" 
+- Programar aplicaciones 100% responsivas "mobile first" 
 - Uso de librerías existentes fáciles de usar
 - Eficiencia del código y eficacia al programar
 - Evitar usar abstracciones y compilar código

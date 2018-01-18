@@ -32,4 +32,4 @@ Seed Lumen:
 Seed Vue2:
 [simple_vue_seed](https://github.com/simpl-e/simple_vue_seed)  
 Demo Vue2:
-[simpl-e.github.io](http://www.simpl-e.github.io)  
+[simpl-e.github.io](http://simpl-e.github.io)  

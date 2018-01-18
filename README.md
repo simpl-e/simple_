@@ -25,3 +25,11 @@ Programa de manera simple, rápida, robusta y al alcance de cualquiera.
 - Descarga automática de librerías npm o bower
 - AMD's compilados como Webpack
 - Procesos ejecutables como grunt o gulp
+
+## Links
+Seed Lumen:
+[simple_lumen_seed](https://github.com/simpl-e/simple_lumen_seed)  
+Seed Vue2:
+[simple_vue_seed](https://github.com/simpl-e/simple_vue_seed)  
+Demo Vue2:
+[simpl-e.github.io](http://www.simpl-e.github.io)  

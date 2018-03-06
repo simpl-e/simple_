@@ -19,12 +19,10 @@ Programa de manera simple, rápida, robusta y al alcance de cualquiera.
 - **jQuery** + **bootstrap**
 - **Requirejs** (AMD)
 - **Vue2** (SPA)
-- **require-vuejs**, el 'glue' entre requirejs y vue https://github.com/edgardleal/require-vuejs
+- **require-vuejs**, la unión entre requirejs y vue https://github.com/edgardleal/require-vuejs
 
-### Que NO tiene simple_
-- Descarga automática de librerías npm o bower
-- AMD's compilados como Webpack
-- Procesos ejecutables como grunt o gulp
+### Que NO usa simple_
+- Administrador de paquetes de librerías npm o bower
 
 ## Links
 Seed Lumen:

@@ -8,13 +8,17 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
   <div id="content"></div>
   <script>
     $.get("https://raw.githubusercontent.com/simpl-e/simple-e/master/vue.md", function(data) {
       document.getElementById('content').innerHTML = marked(data);
+      
+      //CODE Highlight
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
     });
   </script>
 </body>

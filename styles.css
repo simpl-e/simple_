@@ -44,15 +44,14 @@ body{
     position: relative;
     padding: 3px 6px;
 }
-.header{
+
+h1, h2, h3, h4, h5{
     background-color: #5a5a5a;
     color: white;
+    margin-bottom: 0;
 }
-
-xmp{
-    display: inline-block;
-    margin: 0;
-    /*vertical-align: middle;*/
+.pre {
+    margin-top: 0;
 }
 
 .group .td:nth-child(odd) {

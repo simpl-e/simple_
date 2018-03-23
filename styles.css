@@ -27,20 +27,20 @@ body{
     }
 }
 
-.columns{
+#content {
     column-count: 2;
     -webkit-column-gap: 5px;
     -moz-column-gap: 5px;
     column-gap: 5px;
 }
-.group {
+#content > * {
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;            
     border: 1px solid grey;
     margin-bottom: 5px;
 }
-.group > *{
+#content > * > *{
     position: relative;
     padding: 3px 6px;
 }

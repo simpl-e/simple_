@@ -2,14 +2,15 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>Marked in the browser</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
   <div id="content"></div>
   <script>
-    document.getElementById('content').innerHTML =
-      marked('# Marked in the browser\n\nRendered by **marked**.');
+    $.get("https://raw.githubusercontent.com/simpl-e/simple-e/master/vue.md", function(data) {
+      document.getElementById('content').innerHTML = marked(data);
+    });
   </script>
 </body>
 </html>

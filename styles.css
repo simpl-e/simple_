@@ -48,8 +48,9 @@ body{
 h1, h2, h3, h4, h5{
     background-color: #5a5a5a;
     color: white;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     padding: 3px 6px;
+    margin-top: 0;
 }
 pre {
     margin-top: 0;

@@ -52,41 +52,33 @@
 ## TAGS COMUNES
 ### Para construir páginas web en <b>.html</b> usamos tags < >
 
-```html
-<div>contenido</div>
-```
-Agrupar el HTML en elementos separados (**div**isiones)
+| `<div>contenido</div>`
+| :--
+| Agrupar el HTML en elementos separados (**div**isiones)
 
-```html
-<p>texto</p>
-```
-Elementos de texto que añaden márgenes (**p**árrafos)
+| `<p>texto</p>`
+| :--
+| Elementos de texto que añaden márgenes (**p**árrafos)
 
-```html
-<span>palabras</span>
-```
-Agrupaciones de texto para añadir <span style="color: darkgrey; font-weight: bold; text-shadow: 1px 1px black; font-style: italic; font-family: sans-serif;">atributos</span> en texto
+| `<span>palabras</span>`
+| :--
+| Agrupaciones de texto para añadir <span style="color: darkgrey; font-weight: bold; text-shadow: 1px 1px black; font-style: italic; font-family: sans-serif;">atributos</span> en texto
 
-```html
-<a href="ruta.html">un link</a>
-```
-Para hacer <a style="color:blue;text-decoration:underline">un link</a> (**a**nchor)
+| `<a href="ruta.html">un link</a>`
+| :--
+| Para hacer <a style="color:blue;text-decoration:underline">un link</a> (**a**nchor)
 
-```html
-<button>haz clik en el botón</button>
-```
-<div><button>haz clik en el botón</button></div>
+| `<button>haz clik en el botón</button>`
+| :--
+| <button>haz clik en el botón</button>
 
-```html
-<img src="ruta.jpg">
-```
-Muestra la imagen de la ruta: &nbsp; <img src="ruta.jpg" style="position: absolute; margin-top: -7px; width: 20px; height: 20px;">
+| `<img src="ruta.jpg">`
+| :--
+| Muestra la imagen de la ruta: &nbsp; <img src="ruta.jpg" style="position: absolute; margin-top: -7px; width: 20px; height: 20px;">
 
-```html
-<br>
-```
-Elemento para continuar en la siguiente línea como un 'enter'<br>
-(Introducir lineas solo con 'enter' en html no tiene efecto)
+| `<br>`
+| :--
+| Elemento para continuar en la siguiente línea como un 'enter' (Introducir lineas solo con 'enter' en html no tiene efecto)
 
 | `<b></b>`    | `<i></i>`     | `<u></u>`        | `<s></s>`     |
 | ------------ | ------------- | ---------------- | ------------- |
@@ -105,10 +97,9 @@ Elemento para continuar en la siguiente línea como un 'enter'<br>
 | --------- | ---------  | ------------- |
 | <input type="text" placeholder="escribe aquí" style='width: 100%;'>  | <input type="checkbox" style="vertical-align: middle"> | <input type="radio" style="vertical-align: middle"> |
 
-```html
-<textarea>Texto multi-linea</textarea>
-```
-<textarea rows="1" style="width: 100%; resize: vertical; background-color: rgba(255,255,255,0.5)">Texto multi-linea</textarea>
+| `<textarea>Texto multi-linea</textarea>`
+| :--
+| <textarea rows="1" style="width: 100%; resize: vertical; background-color: rgba(255,255,255,0.5)">Texto multi-linea</textarea>
 
 ```html
 <option value="1">
@@ -174,19 +165,14 @@ Desplegable multi-opción:
 ## ATRIBUTOS
 ### Los atributos html son propiedades que se añaden en tags
 
-```html
-<div id="único" class='genérico'>
-```
-**'id'** y **'class'** permiten encontrar dichos &lt;tag&gt; desde el código
+| `<div id="único" class='genérico'>`
+| :--
+| **'id'** y **'class'** permiten encontrar dichos &lt;tag&gt; desde el código
 
-```html
-<span style="color:green; font-weight:bold">
-```
-**'style'** añade <span style="color:green; font-weight:bold">estilos</span> en el contenido del &lt;tag&gt;
+| `<span style="color:green; font-weight:bold">`
+| :--
+| **'style'** añade <span style="color:green; font-weight:bold">estilos</span> en el contenido del &lt;tag&gt;
 
-```html
-<button title="This is a tooltip">OK</button>
-```
-<button title="This is a tooltip">OK</button>  
-**'title'** muestra un pop-up con la información  
-Puede usarse sobre cualquier tipo de &lt;tag&gt;
+| `<button title="This is a tooltip">OK</button>`
+| :--
+| <button title="This is a tooltip">OK</button> **'title'** muestra un pop-up con la información. Puede usarse sobre cualquier tipo de `<tag>`

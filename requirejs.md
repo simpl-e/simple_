@@ -69,6 +69,8 @@ gulp.task('bundle', function () {
 });
 ```
 
+---
+
 ## Definir .js como módulo Object
 ### Funciona como archivo de datos
 

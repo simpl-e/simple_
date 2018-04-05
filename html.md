@@ -87,39 +87,10 @@ Muestra la imagen de la ruta: &nbsp; <img src="ruta.jpg" style="position: absolu
 ```
 Elemento para continuar en la siguiente línea como un 'enter'<br>
 (Introducir lineas solo con 'enter' en html no tiene efecto)
-        
-<div class='td' style="padding: 0">
-    <table style='table-layout:fixed; width:100%; text-align:center'>
-        <tr>
-            <td>
-                <b>`<b></b>`</b>
-            </td>
-            <td>
-                <b>`<i></i>`</b>
-            </td>
-            <td>
-                <b>`<u></u>`</b>
-            </td>
-            <td>
-                <b>`<s></s>`</b>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <b>bold</b>
-            </td>
-            <td>
-                <i>italic</i>
-            </td>
-            <td>
-                <u>underline</u>
-            </td>
-            <td>
-                <s>strike</s>
-            </td>
-        </tr>
-    </table>
-</div>
+
+| `<b></b>` | `<i></i>`  | `<u></u>`     | `<s></s>`  |
+| --------- | ---------  | ------------- | ---------- |
+| **bold**  | **italic** | **underline** | **strike** |
 
 ---
 
@@ -129,30 +100,10 @@ Elemento para continuar en la siguiente línea como un 'enter'<br>
 ```html
 <input type="[...]" placeholder="escribe aquí">
 ```
-<table style='table-layout:fixed; width:100%; text-align:center'>
-    <tr>
-        <td>
-            `type="text"`
-        </td>
-        <td>
-            `type="checkbox"`
-        </td>
-        <td>
-            `type="radio"`
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input type="text" placeholder="escribe aquí" style='width: 100%;'>
-        </td>
-        <td>
-            <input type="checkbox" style="vertical-align: middle">
-        </td>
-        <td>
-            <input type="radio" style="vertical-align: middle">
-        </td>
-    </tr>
-</table>
+
+| `type="text"` | `type="checkbox"` | `type="radio"` |
+| --------- | ---------  | ------------- |
+| <input type="text" placeholder="escribe aquí" style='width: 100%;'>  | <input type="checkbox" style="vertical-align: middle"> | <input type="radio" style="vertical-align: middle"> |
 
 ```html
 <textarea>Texto multi-linea</textarea>

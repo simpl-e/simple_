@@ -1,5 +1,5 @@
-# Vue2
-## Arquitectura y ubicación de archivos
+## Proyecto Vue2
+### Arquitectura basada en require.js
 
 - **src**
   - **boot**: Archivos .js y .css de carga inicial
@@ -17,8 +17,9 @@
 - **main.js**: librerías CDN para require.js
 - **package.json**: solo dev (gulp, etc..)
 
-# Vistas y componentes
-## Plantilla de ejemplo de un componente Vue
+## Vistas y componentes
+### Plantilla de ejemplo de un componente Vue
+
 ``` html
 <template>
   <div id="view_example">
@@ -67,26 +68,53 @@
 </style>
 ```
 
-# Carga dinámica de vista Vue
-##  Se descarga el archivo antes de montar Vue
+## Carga dinámica de una vista Vue
+###  Se descarga el archivo antes de montar Vue
+
 ``` js
 require(["vue!" + url], function (view) {
   new Vue(view).$mount('#app > *:first-child');
 });
 ```
 
-# Carga dinámica de Componente
-## El componente se inicializa antes de su descarga
+## Carga dinámica de un Componente
+### El componente se inicializa antes de su descarga
+
 ``` js
 Vue.component('modal', function(resolve){
   require(['vue!components/modal.html'], resolve);
 });
 ```
 
-# Crear filtro global
-## El filtro se podrá usar en cualquier componente
+## Crear un filtro global
+### El filtro se podrá usar en cualquier componente
+
 ``` js
 Vue.filter('lowerCase', function(txt){
-    return t.charAt(0).toUpperCase() + t.slice(1);
+  return t.charAt(0).toUpperCase() + t.slice(1);
 });
+```
+
+## Vue Modal
+### Uso del modal.html dinámico de simple_
+
+``` js
+require(["vue!modal.html"], function (Modal) {
+  // INICAR MÓDULO REQUIRE.JS COMO CLASE
+  var modal = new Modal();
+  // OBTENER DATA DEL COMPONENTE PARA ALTERAR
+  component.data = component.data();
+  // INYECTAR DATA EXTRA
+  component.data.options = options;
+  // INICIALIZAR COMPONENTE VUE
+  var vm = new Vue(modal);
+  // INSERTAR COMPONENTE EN EL HTML
+  var $div = $("<div>").appendTo("body")[0];
+  vm.$mount($div);
+  // PERSONALIZAR ESTILOS CSS
+  $(vm.$el).find(".div").css('padding', 0);
+  // DEFINIR COMPONENTE VUE CONTENIDO
+  vm.page = "modules/views/login/login.html";
+});
+
 ```

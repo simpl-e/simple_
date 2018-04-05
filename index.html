@@ -3,8 +3,6 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="https://rawgit.com/simpl-e/simple-e/master/styles.css">
-  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
   <style>
@@ -12,6 +10,11 @@
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
+
+      break-before: avoid;
+      break-after: avoid;
+      break-before: avoid-column;
+      break-after: avoid-column;
     }
 
     html {
@@ -28,6 +31,16 @@
       font-family: sans-serif;
     }
 
+    ul {
+      padding-left: 20px !important;
+    }
+
+    .hljs {
+      background: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     @media print {
       html {
         background: white;
@@ -40,6 +53,18 @@
       }
     }
 
+    #content > hr {
+      break-before: column !important;
+      border: none;
+      margin: 0;
+    }
+    #content > p > a {
+      pointer-events: none;
+      cursor: default;
+      color: inherit;
+      text-decoration: none;
+    }
+
     #content {
       column-count: 2;
       -webkit-column-gap: 5px;
@@ -47,18 +72,20 @@
       column-gap: 5px;
     }
 
-    #content>* {
+    #content>*:not(hr) {
       -webkit-column-break-inside: avoid;
       page-break-inside: avoid;
       break-inside: avoid;
-      border: 1px solid grey;
-      margin-bottom: 5px;
+      border: 1px solid black;
+      border-width: 0 1px;
+      margin-bottom: 0;
       margin-top: 0;
+      padding: 3px 6px;
+      padding-right: 3px;
     }
 
     #content>*>* {
-      position: relative;
-      padding: 3px 6px;
+      position: relative;      
     }
 
     h1,
@@ -66,18 +93,43 @@
     h3,
     h4,
     h5 {
-      background-color: #5a5a5a;
-      color: white;
       margin-bottom: 0 !important;
       padding: 3px 6px;
       margin-top: 0;
+      line-height: 12px;
+      break-after: avoid-column;
+    }
+
+    h1 {
+      padding-top: 9px !important;
+      text-align: center;
+      border: none !important;
+      font-size: 16px;
+    }
+
+    h2 {
+      break-before: auto !important;
+      background: grey;
+      color: white;
+      border-top: 1px solid black !important;      
+      font-size: 15px;
+      margin-top: 5px !important;
+    }
+
+    h3 {
+      background: grey;
+      color: white;
+      border-bottom: 2px solid black !important;
+      font-weight: normal;
+      font-size: 13px;
     }
 
     pre {
       margin-top: 0;
+      padding: 0 !important;
     }
 
-    .group .td:nth-child(odd) {
+    #content > p:nth-of-type(even), #content > pre:nth-of-type(even) {
       /*border-top: 1px solid darkgrey;*/
       background-color: gainsboro;
     }
@@ -98,8 +150,12 @@
       color: #5a5a5a;
     }
 
-    .hljs {
-      background: white;
+    #content * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    li {
+      overflow: visible !important;
     }
   </style>
 

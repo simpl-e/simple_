@@ -88,9 +88,9 @@ Muestra la imagen de la ruta: &nbsp; <img src="ruta.jpg" style="position: absolu
 Elemento para continuar en la siguiente línea como un 'enter'<br>
 (Introducir lineas solo con 'enter' en html no tiene efecto)
 
-| `<b></b>` | `<i></i>`  | `<u></u>`     | `<s></s>`  |
-| --------- | ---------  | ------------- | ---------- |
-| **bold**  | **italic** | **underline** | **strike** |
+| `<b></b>`    | `<i></i>`     | `<u></u>`        | `<s></s>`     |
+| ------------ | ------------- | ---------------- | ------------- |
+| <b>bold</b>  | <i>italic</i> | <u>underline</u> | <s>strike</s> |
 
 ---
 

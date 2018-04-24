@@ -5,19 +5,19 @@
 ### Básico
 
 - [Html](html.md)
-- [Lumen](#lumen)
+- [Lumen](lumen.md)
 
 ## Documentación
 ### Avanzado
 
-- [Uso de Laravel como API](#api)
-- [Apps Cordova](#cordova)
-- [Git / Github](#git)
-- [JWT auth token](#jwt)
-- [Websocket laravel-echo-server](#laravel-echo-server)
-- [RequireJS AMD](#requirejs)
-- [Visual Studio Code](#vscode)
-- [Vue2](#vue)
+- [Uso de Laravel como API](api.md)
+- [Apps Cordova](cordova.md)
+- [Git / Github](git.md)
+- [JWT auth token](jwt.md)
+- [Websocket 'laravel-echo-server'](laravel-echo-server.md)
+- [RequireJS AMD](requirejs.md)
+- [Visual Studio Code](vscode.md)
+- [Vue2](vue.md)
 
 ## Objetivos
 ### Programar de manera Simple, Rápida, Robusta

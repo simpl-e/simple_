@@ -185,21 +185,24 @@
   </div>
 
   <script>
-    var repo = location.hash.split("#").pop();
+    function load() {
+      var repo = location.hash.split("#").pop();
 
-    if (-1 == repo.indexOf(".")) {
-      repo += ".md";
-    }
-
-    $.get(repo, function (markdown) {
-      if (!markdown) {
-        $.get("https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo, function (markdown) {
-          show(markdown);
-        });
-      } else {
-        show(markdown);
+      // '.md' IF ANY EXTENSION
+      if (-1 == repo.indexOf(".")) {
+        repo += ".md";
       }
-    });
+
+      $.get(repo, function (markdown) {
+        if (!markdown) {
+          $.get("https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo, function (markdown) {
+            show(markdown);
+          });
+        } else {
+          show(markdown);
+        }
+      });
+    }
 
     function show(markdown) {
       document.getElementById('content').innerHTML = marked(markdown);
@@ -219,6 +222,11 @@
         $link.attr("href", location.origin + location.pathname + hashArr.join("/") + "/" + href);
       }
     }
+
+    window.onhashchange = function () {
+      load();
+    }
+    load();
   </script>
 </body>
 

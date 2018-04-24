@@ -183,9 +183,13 @@
   <script>
     var repo = location.hash.split("#").pop();
 
-    $.get(repo + ".md", function (markdown) {
+    if (-1 == repo.indexOf(".")) {
+      repo += ".md";
+    }
+
+    $.get(repo, function (markdown) {
       if (!markdown) {
-        $.get("https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo + ".md", function (markdown) {
+        $.get("https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo, function (markdown) {
           show(markdown);
         });
       } else {

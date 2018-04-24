@@ -188,10 +188,6 @@
 <body>
   <div id="content"></div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
   <script>
     function load() {
       var repo = location.hash.split("#").pop();
@@ -236,19 +232,20 @@
     window.onhashchange = function () {
       load();
     }
-    load();
 
-    // //https://stackoverflow.com/questions/11803215/how-to-include-multiple-js-files-using-jquery-getscript-method
-    // $.when(
-    //   $.getScript("https://code.jquery.com/jquery-3.3.1.min.js"),
-    //   $.getScript("https://cdn.jsdelivr.net/npm/marked/marked.min.js"),
-    //   $.getScript("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"),
-    //   $.Deferred(function (deferred) {
-    //     $(deferred.resolve);
-    //   })
-    // ).done(function () {
-    //   //load();
-    // });
+    // DEFER
+    //https://stackoverflow.com/questions/11803215/how-to-include-multiple-js-files-using-jquery-getscript-method
+    $.when(
+      $.getScript("https://code.jquery.com/jquery-3.3.1.min.js"),
+      $.getScript("https://cdn.jsdelivr.net/npm/marked/marked.min.js"),
+      $.getScript("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"),
+      $.Deferred(function (deferred) {
+        $(deferred.resolve);
+      })
+    ).done(function () {
+      load();
+    });
+    
   </script>
 </body>
 

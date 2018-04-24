@@ -34,3 +34,8 @@ Demo Vue2:
 
 ## Para imprimir documentaciones:
 http://htmlpreview.github.io/?[LINK_HTML]
+
+<div class="d-none">
+  <br>
+    Para ver la documentación con formato de impresión online: https://rawgit.com/simpl-e/simple-e/master/index.html#https://raw.githubusercontent.com/simple-e/simple-e/master/README.md
+</div>

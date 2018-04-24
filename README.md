@@ -1,28 +1,30 @@
 
 # simple_
-Programa de manera simple, rápida, robusta y al alcance de cualquiera.
+Programa de manera Simple, Rápida, Robusta.
+
+---
 
 ### Objetivo
 - **Escalabilidad** mediante módulos pequeños e independientes
-- Cargas **eficientes** con módulos dinámicos
-- Separar el código entre cliente y servidor con comunicacion **API** 
-- Programar aplicaciones 100% **responsivas** "mobile first"
-- Uso de las librerías preferidas en github
-- Evitar usar abstracciones o compilar código
-- Crear un estándar
+- Cargas **eficientes** del lado del servidor mediante módulos dinámicos
+- Separación del código entre cliente y servidor con comunicacion **API** 
+- Programa una sola vez, aplicaciones **responsivas** "mobile first"
+- Uso de las librerías preferidas por los usuarios de Github
+- Evitar abstracciones o código compilado
+- Trabajar siempre bajo un estándar
 
 ### Especificaciones
 - Trabajar la web en base a "**Definición Asíncrona de Módulos**" (AMD)
 - Porgramar "**Aplicaciones de Página Única**" (SPA)
+- Carga de librerías mediante CDN (bundle para apps)
 
 ### Tecnologías
 - **jQuery** + **bootstrap**
 - **Requirejs** (AMD)
 - **Vue2** (SPA)
-- **require-vuejs**, la unión entre requirejs y vue https://github.com/edgardleal/require-vuejs
+- **require-vuejs**, [unión](https://github.com/edgardleal/require-vuejs) entre los mundos requirejs y vue
 
-### Que NO usa simple_
-- Administrador de paquetes de librerías npm o bower
+---
 
 ## Links
 Seed Lumen:
@@ -31,9 +33,6 @@ Seed Vue2:
 [simple_vue_seed](https://github.com/simpl-e/simple_vue_seed)  
 Demo Vue2:
 [simpl-e.github.io](http://simpl-e.github.io)  
-
-## Para imprimir documentaciones:
-http://htmlpreview.github.io/?[LINK_HTML]
 
 <div class="d-none">
   <br>

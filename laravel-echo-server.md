@@ -1,23 +1,3 @@
-# Esquemas de comunicación
-
-## Usuario a K'
-### Configurador
-
-- Se importan las librerías '**laravel-echo**' y '**socket.io**'
-- '**laravel-echo**' crea conexión websocket hacia el servidor **https**
-- Petición pasa por **proxy** a través del puerto **:443** al **:6001**
-- Servidor recibe websocket con la lib. '**laravel-echo-server**'
-- Cliente escucha a los **canales** websocket **públicos**
-- Cliente añade el header '**Authorization**' **JWT** en '**laravel-echo**'
-- Cliente puede escuchar ahora canales '**presence**' y '**private**'
-
-- Petición **HTTP** a controlador Laravel ejecuta un **Event.php**
-- 
-
-```
-Cliente ----------- Servidor
-```
-
 # laravel-echo-server
 
 ## Iniciar servidor websocket

@@ -4,17 +4,19 @@
 ## Documentación
 ### Básico
 
-- [html](#html)
-- [lumen](#lumen)
+- [Html](#html)
+- [Lumen](#lumen)
 
 ## Documentación
 ### Avanzado
 
-- [api](#api)
-- [git](#git)
-- [jwt](#jwt)
-- [laravel-echo-server](#laravel-echo-server)
-- [requirejs](#requirejs)
+- [Uso de Laravel como API](#api)
+- [Apps Cordova](#cordova)
+- [Git / Github](#git)
+- [JWT auth token](#jwt)
+- [Websocket laravel-echo-server](#laravel-echo-server)
+- [RequireJS AMD](#requirejs)
+- [Visual Studio Code](#vscode)
 - [Vue2](#vue)
 
 ## Objetivos
@@ -45,7 +47,7 @@
 - **axios** (http)
 
 ## Tecnologías
-### Lado del servidor .php
+### Lado del servidor .php (con composer)
 
 - laravel/**lumen-framework** (framework)
 - tymon/**jwt-auth** (jwt auth)

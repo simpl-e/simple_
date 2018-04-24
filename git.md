@@ -66,6 +66,14 @@ git log
 git checkout [COMMIT]
 ```
 
+## .gitignore
+### Eliminar archivos ignorados del repositorio
+
+Debe hacerse en todos los branch para evitar bugs al moverse entre branches
+```sh
+git rm --cached <file>
+```
+
 ## Cache
 ### Mantener passwords guardadas al hacer git pull
 

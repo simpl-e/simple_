@@ -66,6 +66,30 @@ $router->post('{class}/{method}'
 
 # Cliente
 
+## Uso del API (axios)
+### Métodos del controlador que llama
+
+```js
+// function get(Request $request) {
+axios.get("user");
+
+// function first(Request $request) {
+axios.get("user/[ID]");
+
+// function post(Request $request) {
+axios.post("user");
+
+// function put(Request $request) {
+axios.put("user/[ID]");
+
+// function patch(Request $request) {
+axios.patch("user/[ID]");
+
+// function delete(Request $request) {
+axios.delete("user/[ID]");
+
+```
+
 ## Uso del API (Guzzle)
 ### Métodos del controlador que llama
 
@@ -74,17 +98,17 @@ $router->post('{class}/{method}'
 $client->get("user");
 
 // function first(Request $request) {
-$client->get("user/1");
+$client->get("user/[ID]");
 
 // function post(Request $request) {
 $client->post("user");
 
 // function put(Request $request) {
-$client->put("user");
+$client->put("user/[ID]");
 
 // function patch(Request $request) {
-$client->patch("user");
+$client->patch("user/[ID]");
 
 // function delete(Request $request) {
-$client->delete("user");
+$client->delete("user/[ID]");
 ```

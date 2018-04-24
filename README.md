@@ -1,32 +1,62 @@
 
 # simple_
-Programa de manera Simple, Rápida, Robusta.
 
----
+## Documentación
+### Básico
 
-### Objetivo
-- **Escalabilidad** mediante módulos pequeños e independientes
-- Cargas **eficientes** del lado del servidor mediante módulos dinámicos
-- Separación del código entre cliente y servidor con comunicacion **API** 
-- Programa una sola vez, aplicaciones **responsivas** "mobile first"
-- Uso de las librerías preferidas por los usuarios de Github
-- Evitar abstracciones o código compilado
-- Trabajar siempre bajo un estándar
+- [html](#html)
+- [lumen](#lumen)
 
-### Especificaciones
-- Trabajar la web en base a "**Definición Asíncrona de Módulos**" (AMD)
-- Porgramar "**Aplicaciones de Página Única**" (SPA)
-- Carga de librerías mediante CDN (bundle para apps)
+## Documentación
+### Avanzado
 
-### Tecnologías
+- [api](#api)
+- [git](#git)
+- [jwt](#jwt)
+- [laravel-echo-server](#laravel-echo-server)
+- [requirejs](#requirejs)
+- [Vue2](#vue)
+
+## Objetivos
+### Programar de manera Simple, Rápida, Robusta
+
+#### Escalabilidad
+- Código fragmentado en módulos pequeños e independientes
+- Separación del código entre cliente y servidor mediante **API**
+
+#### Eficiencia
+- Carga de módulos asíncronos dinámicos **AMD**
+- Usar librerías mediante CDN (compilar bundle para apps)
+- Programar "**Aplicaciones de Página Única**" (SPA)
+
+#### Simplicidad
+- Un solo código, aplicaciones **responsivas** "mobile first"
+- Preferencia por **librerías** (mejor valoradas) de **Github**
+- **Evitar abstracciones** o código compilado
+- Trabajar todo bajo un **estándar**
+
+## Tecnologías
+### Lado del cliente .js
+
 - **jQuery** + **bootstrap**
-- **Requirejs** (AMD)
+- **RequireJS** (AMD)
 - **Vue2** (SPA)
 - **require-vuejs**, [unión](https://github.com/edgardleal/require-vuejs) entre los mundos requirejs y vue
+- **axios** (http)
+
+## Tecnologías
+### Lado del servidor .php
+
+- laravel/**lumen-framework** (framework)
+- tymon/**jwt-auth** (jwt auth)
+- guzzlehttp/**guzzle** (http)
+- nordsoftware/**lumen-cors** (cors)
 
 ---
 
 ## Links
+### Seeds
+
 Seed Lumen:
 [simple_lumen_seed](https://github.com/simpl-e/simple_lumen_seed)  
 Seed Vue2:

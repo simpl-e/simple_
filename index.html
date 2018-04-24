@@ -27,8 +27,16 @@
       background: white;
       box-shadow: 0 0 5px black;
       font-size: 12px;
-      padding: 35px;
+      padding: 32px;
       font-family: sans-serif;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    table td {
+      text-align: center;
     }
 
     ul {
@@ -56,6 +64,7 @@
       break-before: column !important;
       border: none;
       margin: 0;
+      height: 0.1px;
     }
 
     /* #content>p>a {
@@ -174,15 +183,14 @@
     }
   </style>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 </head>
 
 <body>
-  <div id="content">
-    https://rawgit.com/simpl-e/simple-e/master/index.html#https://raw.githubusercontent.com/widefense/documentacion/master/wsc
-  </div>
+  <div id="content"></div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
   <script>
     function load() {
@@ -195,6 +203,8 @@
 
       $.get(repo, function (markdown) {
         if (!markdown) {
+          console.log(repo + "not found locally");
+
           $.get("https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo, function (markdown) {
             show(markdown);
           });
@@ -227,6 +237,18 @@
       load();
     }
     load();
+
+    // //https://stackoverflow.com/questions/11803215/how-to-include-multiple-js-files-using-jquery-getscript-method
+    // $.when(
+    //   $.getScript("https://code.jquery.com/jquery-3.3.1.min.js"),
+    //   $.getScript("https://cdn.jsdelivr.net/npm/marked/marked.min.js"),
+    //   $.getScript("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"),
+    //   $.Deferred(function (deferred) {
+    //     $(deferred.resolve);
+    //   })
+    // ).done(function () {
+    //   //load();
+    // });
   </script>
 </body>
 

@@ -52,33 +52,26 @@
 ## Tags comunes
 ### Para construir páginas web en <b>.html</b> usamos tags < >
 
-| `<div>contenido</div>`
-| :--
-| Agrupar el HTML en elementos separados (**div**isiones)
+#### `<div>contenido</div>`
+Agrupar el HTML en elementos separados (**div**isiones)
 
-| `<p>texto</p>`
-| :--
-| Elementos de texto que añaden márgenes (**p**árrafos)
+#### `<p>texto</p>`
+Elementos de texto que añaden márgenes (**p**árrafos)
 
-| `<span>palabras</span>`
-| :--
-| Agrupaciones de texto para añadir <span style="color: darkgrey; font-weight: bold; text-shadow: 1px 1px black; font-style: italic; font-family: sans-serif;">atributos</span> en texto
+#### `<span>palabras</span>`
+Agrupaciones de texto para añadir <span style="color: darkgrey; font-weight: bold; text-shadow: 1px 1px black; font-style: italic; font-family: sans-serif;">atributos</span> en texto
 
-| `<a href="ruta.html">un link</a>`
-| :--
-| Para hacer <a style="color:blue;text-decoration:underline">un link</a> (**a**nchor)
+#### `<a href="ruta.html">un link</a>`
+Para hacer <a style="color:blue;text-decoration:underline">un link</a> (**a**nchor)
 
-| `<button>haz clik en el botón</button>`
-| :--
-| <button>haz clik en el botón</button>
+#### `<button>haz clik en el botón</button>`
+<button>haz clik en el botón</button> (botón)
 
-| `<img src="ruta.jpg">`
-| :--
-| Muestra la imagen de la ruta: &nbsp; <img src="ruta.jpg" style="position: absolute; margin-top: -7px; width: 20px; height: 20px;">
+#### `<img src="ruta.jpg">`
+Muestra la imagen de la ruta: &nbsp; <img src="ruta.jpg" style="position: absolute; margin-top: -7px; width: 20px; height: 20px;">
 
-| `<br>`
-| :--
-| Elemento para continuar en la siguiente línea como un 'enter' (Introducir lineas solo con 'enter' en html no tiene efecto)
+#### `<br>`
+Elemento para continuar en la siguiente línea como un 'enter' (Introducir lineas solo con 'enter' en html no tiene efecto)
 
 | `<b></b>`    | `<i></i>`     | `<u></u>`        | `<s></s>`     |
 | ------------ | ------------- | ---------------- | ------------- |
@@ -97,23 +90,20 @@
 | --------- | --------- | ------------- |
 | <input type="text" placeholder="escribe aquí" style='width: 100%;'> | <input type="checkbox" style="vertical-align: middle"> | <input type="radio" style="vertical-align: middle"> |
 
-| `<textarea>Texto multi-linea</textarea>`
-| :--
-| <textarea rows="1" style="width: 100%; resize: vertical; background-color: rgba(255,255,255,0.5)">Texto multi-linea</textarea>
+#### `<textarea>Texto multi-linea</textarea>`
+<textarea rows="1" style="resize: vertical; background-color: rgba(255,255,255,0.5)">Texto multi-linea</textarea> (área de texto)
 
+#### Desplegable multi-opción:
 ```html
-<option value="1">
-    opción 1
-</option>
-<option value="2">
-    opción 2
-</option>
+<select>
+  <option value="1">opción 1</option>
+  <option value="2">opción 2</option>
+</select>
 ```
-Desplegable multi-opción:
 <select>
     <option value='1'>opción 1</option>
     <option value='2'>opción 2</option>
-</select>
+</select> (select)
 
 ## Tag tabla
 ###  nota: las tablas NUNCA se usan para organizar la pag. web
@@ -165,14 +155,12 @@ Desplegable multi-opción:
 ## Atributos
 ### Los atributos html son propiedades que se añaden en tags
 
-| `<div id="único" class='genérico'>`
-| :--
-| **'id'** y **'class'** permiten encontrar dichos &lt;tag&gt; desde el código
+#### `<div id="único" class='genérico'>`
+**'id'** y **'class'** permiten encontrar dichos &lt;tag&gt; desde el código
 
-| `<span style="color:green; font-weight:bold">`
-| :--
-| **'style'** añade <span style="color:green; font-weight:bold">estilos</span> en el contenido del &lt;tag&gt;
+#### `<span style="color:green; font-weight:bold">`
+**'style'** añade <span style="color:green; font-weight:bold">estilos</span> en el contenido del &lt;tag&gt;
 
-| `<button title="This is a tooltip">OK</button>`
-| :--
-| <button title="This is a tooltip">OK</button> **'title'** muestra un pop-up con la información. Puede usarse sobre cualquier tipo de `<tag>`
+#### `<button title="This is a tooltip">OK</button>`
+<button title="This is a tooltip">OK</button> **'title'** muestra un pop-up con la información.  
+Puede usarse sobre cualquier tipo de `<tag>`

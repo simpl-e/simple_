@@ -223,9 +223,15 @@
       for (var i = 0; i < $links.length; i++) {
         var $link = $($links[i]);
         var href = $link.attr("href");
-        var hashArr = location.hash.split("/");
-        hashArr.pop();
-        $link.attr("href", location.origin + location.pathname + hashArr.join("/") + "/" + href);
+
+        var hash = "#";
+        if (location.hash) {
+          var hashArr = location.hash.split("/");
+          hashArr.pop();
+          hash = hashArr.join("/") + "/";
+        }
+
+        $link.attr("href", location.origin + location.pathname + hash + href);
       }
     }
 
@@ -245,7 +251,6 @@
     ).done(function () {
       load();
     });
-    
   </script>
 </body>
 

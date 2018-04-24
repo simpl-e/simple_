@@ -228,6 +228,10 @@
       for (var i = 0; i < $links.length; i++) {
         var $link = $($links[i]);
         var href = $link.attr("href");
+  
+        if (-1 != href.indexOf("://") && -1 == href.indexOf("raw.githubusercontent.com")) {
+          continue;
+        }
 
         var hash = "";
         if (location.hash) {

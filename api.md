@@ -1,35 +1,70 @@
-## Definiciones del API
+# Servidor
+
+## Definiciones del API Lumen
 ### routes/api.php
 
 ```php
 <?php
 
-// INICIALIZAR CONTROLADOR
-resource($router, 'user', 'UserController');
+$router->group(['middleware' => 'jwt-auth']
+    , function () use ($router) {
 
-// MÉTODOS POST EXTRA DEL CONTROLADOR
-$router->post('{class}/{method}',
-    function ($request, $class, $method) {
+$router->get('{class}'
+    , function ($request, $class) {
+  $controller=app()->make("App\\Http\\Controllers\\"
+  . ucwords($class) . "Controller");
+  return $controller->get($request);
+});
 
-    $name = ucwords($class) . "Controller";
-    $path = "App\\Http\\Controllers\\$name";
-    $controller = app()->make($path);
+$router->get('{class}/{id}'
+    , function ($request, $class, $id) {
+  $controller=app()->make("App\\Http\\Controllers\\"
+    . ucwords($class) . "Controller");
+  return $controller->first($request, $id);
+});
+
+$router->post('{class}'
+    , function ($request, $class) {
+  $controller=app()->make("App\\Http\\Controllers\\"
+    . ucwords($class) . "Controller");
+  return $controller->post($request);
+});
+
+$router->put('{class}/{id}'
+    , function ($request, $class, $id) {
+  $controller=app()->make("App\\Http\\Controllers\\"
+    . ucwords($class) . "Controller");
+  return $controller->put($request, $id);
+});
+
+$router->patch('{class}/{id}'
+    , function ($request, $class, $id) {
+  $controller=app()->make("App\\Http\\Controllers\\"
+    . ucwords($class) . "Controller");
+  return $controller->patch($request, $id);
+});
+
+$router->delete('{class}/{id}'
+    , function ( $request, $class, $id) {
+  $controller=app()->make("App\\Http\\Controllers\\"
+  . ucwords($class) . "Controller");
+  return $controller->delete($request, $id);
+});
+
+// EXTRA
+$router->post('{class}/{method}'
+    , function ($request, $class, $method) {
+  $controller=app()->make("App\\Http\\Controllers\\"
+    . ucwords($class) . "Controller");
     return $controller->$method($request);
 });
 
-// MÉTODOS API REST FULL
-//gist.github.com/sohelamin/a85329700f1ecae1b490
-//scotch.io/tutorials/simple-laravel-crud-with-resource-controllers
-function resource($router, $uri, $contr) {
-    //global $router;
-    $router->get($uri, "$contr@get");
-    $router->get("$uri/{id?}", "$contr@first");
-    $router->post($uri, "$contr@post");
-    $router->put("$uri/{id?}", "$contr@put");
-    $router->patch("$uri/{id?}", "$contr@patch");
-    $router->delete("$uri/{id?}", "$contr@delete");
-}
+});
 ```
+
+---
+
+# Cliente
 
 ## Uso del API (Guzzle)
 ### Métodos del controlador que llama

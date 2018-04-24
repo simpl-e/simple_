@@ -49,7 +49,7 @@
 </html>
 ```
 
-## TAGS COMUNES
+## Tags comunes
 ### Para construir páginas web en <b>.html</b> usamos tags < >
 
 ```html
@@ -94,7 +94,7 @@ Elemento para continuar en la siguiente línea como un 'enter'<br>
 
 ---
 
-## TAGS INPUTS
+## Tags inputs
 ### los inputs sirven para que el usuario pueda introducir y datos
 
 ```html
@@ -102,8 +102,8 @@ Elemento para continuar en la siguiente línea como un 'enter'<br>
 ```
 
 | `type="text"` | `type="checkbox"` | `type="radio"` |
-| --------- | ---------  | ------------- |
-| <input type="text" placeholder="escribe aquí" style='width: 100%;'>  | <input type="checkbox" style="vertical-align: middle"> | <input type="radio" style="vertical-align: middle"> |
+| --------- | --------- | ------------- |
+| <input type="text" placeholder="escribe aquí" style='width: 100%;'> | <input type="checkbox" style="vertical-align: middle"> | <input type="radio" style="vertical-align: middle"> |
 
 ```html
 <textarea>Texto multi-linea</textarea>
@@ -124,7 +124,7 @@ Desplegable multi-opción:
     <option value='2'>opción 2</option>
 </select>
 
-## TAG TABLA
+## Tag tabla
 ###  nota: las tablas NUNCA se usan para organizar la pag. web
 
 ```html
@@ -171,7 +171,7 @@ Desplegable multi-opción:
     </tbody>
 </table>
 
-## ATRIBUTOS
+## Atributos
 ### Los atributos html son propiedades que se añaden en tags
 
 ```html

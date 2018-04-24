@@ -36,7 +36,6 @@
     }
 
     .hljs {
-      background: 0;
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -53,12 +52,13 @@
       }
     }
 
-    #content > hr {
+    #content>hr {
       break-before: column !important;
       border: none;
       margin: 0;
     }
-    #content > p > a {
+
+    #content>p>a {
       pointer-events: none;
       cursor: default;
       color: inherit;
@@ -85,7 +85,7 @@
     }
 
     #content>*>* {
-      position: relative;      
+      position: relative;
     }
 
     h1,
@@ -111,7 +111,7 @@
       break-before: auto !important;
       background: grey;
       color: white;
-      border-top: 1px solid black !important;      
+      border-top: 1px solid black !important;
       font-size: 15px;
       margin-top: 5px !important;
     }
@@ -124,15 +124,24 @@
       font-size: 13px;
     }
 
+    h4 {
+      padding-bottom: 0 !important;
+      padding-top: 5px !important;
+      border-top: 1px solid darkgray !important;
+    }
+
+    p {
+      padding-top: 0 !important;
+    }
+
     pre {
       margin-top: 0;
       padding: 0 !important;
     }
 
-    #content > p:nth-of-type(even), #content > pre:nth-of-type(even) {
-      /*border-top: 1px solid darkgrey;*/
+    /* #content > p:nth-of-type(even), #content > pre:nth-of-type(even) {
       background-color: gainsboro;
-    }
+    } */
 
     .table_example {
       border-collapse: collapse;
@@ -154,8 +163,10 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
     li {
       overflow: visible !important;
+      padding-bottom: 2px;
     }
   </style>
 
@@ -165,30 +176,40 @@
 </head>
 
 <body>
-  <div id="content"></div>
+  <div id="content">
+    https://rawgit.com/simpl-e/simple-e/master/index.html#https://raw.githubusercontent.com/widefense/documentacion/master/wsc
+  </div>
+
   <script>
-    get(function (data) {
-      document.getElementById('content').innerHTML = marked(data);
+    var repo = location.hash.split("#").pop();
+
+    $.get(repo + ".md", function (markdown) {
+      if (!markdown) {
+        $.get("https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo + ".md", function (markdown) {
+          show(markdown);
+        });
+      } else {
+        show(markdown);
+      }
+    });
+
+    function show(markdown) {
+      document.getElementById('content').innerHTML = marked(markdown);
 
       //CODE Highlight
       $('pre code').each(function (i, block) {
         hljs.highlightBlock(block);
       });
-    });
 
-    function get(callback) {
-      $.get(location.hash.split("#").pop() + ".md",
-        function (data) {
-          if (!data) {
-            $.get("https://raw.githubusercontent.com/simpl-e/simple-e/master/" + location.hash.split("#").pop() +
-              ".md",
-              function (data) {
-                callback(data);
-              });
-          } else {
-            callback(data);
-          }
-        });
+      //LINKS
+      var $links = $("a");
+      for (var i = 0; i < $links.length; i++) {
+        var $link = $($links[i]);
+        var href = $link.attr("href");
+        var hash = location.hash;
+        hash.split("/").pop();
+        $link.attr("href", location.origin + location.pathname + "#" + hash.join("/") + href);
+      }
     }
   </script>
 </body>

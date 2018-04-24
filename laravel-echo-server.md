@@ -1,3 +1,23 @@
+# Esquemas de comunicación
+
+## Usuario a K'
+### Configurador
+
+- Se importan las librerías '**laravel-echo**' y '**socket.io**'
+- '**laravel-echo**' crea conexión websocket hacia el servidor **https**
+- Petición pasa por **proxy** a través del puerto **:443** al **:6001**
+- Servidor recibe websocket con la lib. '**laravel-echo-server**'
+- Cliente escucha a los **canales** websocket **públicos**
+- Cliente añade el header '**Authorization**' **JWT** en '**laravel-echo**'
+- Cliente puede escuchar ahora canales '**presence**' y '**private**'
+
+- Petición **HTTP** a controlador Laravel ejecuta un **Event.php**
+- 
+
+```
+Cliente ----------- Servidor
+```
+
 # laravel-echo-server
 
 ## Iniciar servidor websocket
@@ -126,6 +146,19 @@ redirect_stderr=true
 
 # Laravel
 
+## Setup manual
+### 
+
+```sh
+sudo apt/yum install nodejs
+```
+
+AllowOverride All
+
+```sh
+cp /var/www/html/api/kprima/settings.backup.js /var/www/html/api/kprima/settings.js
+```
+
 ## Http API
 ### Obtener datos de los canales (Guzzle)
 
@@ -150,6 +183,14 @@ $client->get("[..]:6001/apps/".[APP_ID]."/channels", [
 https://github.com/tlaverdure/laravel-echo-server/issues/225
 ```sh
 DEBUG=* /usr/bin/laravel-echo-server start
+```
+
+## REDIS
+### Validar conexiones 'laravel-echo-server' y sockets 'presence'
+
+```sh
+redis-cli -a [PASSWORD]
+> monitor
 ```
 
 ---

@@ -208,7 +208,7 @@
         var href = $link.attr("href");
         var hashArr = location.hash.split("/");
         hashArr.pop();
-        $link.attr("href", location.origin + location.pathname + "#" + hashArr.join("/") + href);
+        $link.attr("href", location.origin + location.pathname + hashArr.join("/") + "/" + href);
       }
     }
   </script>

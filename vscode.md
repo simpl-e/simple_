@@ -64,6 +64,8 @@ Plugin **markdownlint**
 
 Plugin **vscode-icons**
 
+---
+
 ## Bonus
 ### Mostrar árbol de archivos
 

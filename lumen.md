@@ -55,6 +55,11 @@ Añade 'public/controller/method' a la url
 
 [url]/api_test.html
 
+## Auth Middlewares
+### Manejo de roles
+
+TODO
+
 ## Bonus
 ### Para añadir clases de uso común
 

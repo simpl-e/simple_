@@ -233,7 +233,12 @@
       for (var i = 0; i < $links.length; i++) {
         var $link = $($links[i]);
         var href = $link.attr("href");
-  
+
+        //GITHUB TO RAWGIT
+        if (href.indexOf("//github.com")) {
+          href = href.replace("github.com", "rawgit.com").replace("/blob", "");
+        }
+
         if (-1 != href.indexOf("://") && -1 == href.indexOf("raw.githubusercontent.com")) {
           continue;
         }
@@ -252,6 +257,7 @@
 
         $link.attr("href", location.origin + location.pathname + hash + href);
       }
+
     }
 
     window.onhashchange = function () {

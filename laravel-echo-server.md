@@ -68,9 +68,9 @@ echo.join("kprimas")
 </VirtualHost>
 ```
 
-Exec: (no sudo)
+Inicializar
 ```sh
-supervisord
+supervisord -c /etc/supervisord.conf
 ```
 
 Par debuguear el proceso:
@@ -97,7 +97,7 @@ Configuración en `/etc/supervisord.conf`:
 ```sh
 [...]
 
-[program:echo-server]
+[program:laravel-echo-server]
 directory=[directorio de 'laravel-echo-server.json']
 command=/usr/bin/laravel-echo-server start
 autostart=true
@@ -113,7 +113,7 @@ Configuración en `/etc/supervisord.conf`:
 ```sh
 [...]
 
-[program:echo-client]
+[program:laravel-echo-client]
 directory=[directorio del 'cliente websocket']
 command=node websocket.js
 autostart=true

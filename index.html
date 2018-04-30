@@ -62,6 +62,9 @@
         padding: 0;
         box-shadow: none;
       }
+      #link {
+        display: none;
+      }
     }
 
     #content>hr {
@@ -194,6 +197,7 @@
 
 <body>
   <div id="content"></div>
+  <div id="link"></div>
 
   <script>
     function load() {
@@ -236,7 +240,8 @@
 
         //GITHUB TO RAWGIT
         if (href.indexOf("//github.com")) {
-          href = href.replace("github.com", "rawgit.com").replace("/blob", "");
+          $("#link").text("original in " + href);
+          href = href.replace("github.com", "raw.githubusercontent.com").replace("/blob", "");
         }
 
         if (-1 != href.indexOf("://") && -1 == href.indexOf("raw.githubusercontent.com")) {

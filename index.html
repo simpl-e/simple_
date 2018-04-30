@@ -227,9 +227,11 @@
         //GITHUB LINK
         var link = repo.split("?")[0];
         link = -1 == link.indexOf("//") ? "https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo : repo;
-        var linkArr = link.replace("raw.githubusercontent.com", "github.com").split("/");
-        linkArr.splice(-2, 0, "blob");
-        var link = linkArr.join("/");
+        var link = link.replace("raw.githubusercontent.com", "github.com");
+
+        var blobIndex = link.indexOf("/master/");
+        var link = link.slice(0, blobIndex) + "/blob" + link.slice(blobIndex);
+
         $("#link").html("original in: <a href='" + link + "'>" + link + "</a>");
       });
     }

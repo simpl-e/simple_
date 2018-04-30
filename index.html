@@ -225,7 +225,8 @@
         }
 
         //GITHUB LINK
-        var link = -1 == repo.indexOf("//") ? "https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo : repo;
+        var link = repo.split("?")[0];
+        link = -1 == link.indexOf("//") ? "https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo : repo;
         var linkArr = link.replace("raw.githubusercontent.com", "github.com").split("/");
         linkArr.splice(-2, 0, "blob");
         var link = linkArr.join("/");

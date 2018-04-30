@@ -59,12 +59,12 @@ Añadir los 'php-cs-fixer.*' de 'settings.json' +
 
 Plugin **markdownlint**
 
+---
+
 ## Bonus
 ### Iconos más llamativos en el arbol de proyectos
 
 Plugin **vscode-icons**
-
----
 
 ## Bonus
 ### Mostrar árbol de archivos

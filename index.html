@@ -197,7 +197,7 @@
 
 <body>
   <div id="content"></div>
-  <div id="link"></div>
+  <div id="link" style="text-align: center;"></div>
 
   <script>
     function load() {
@@ -215,12 +215,21 @@
         if (!markdown) {
           console.log(repo + " not found locally");
 
-          $.get("https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo, function (markdown) {
+          repo = "https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo;
+
+          $.get(repo, function (markdown) {
             show(markdown);
           });
         } else {
           show(markdown);
         }
+
+        //GITHUB LINK
+        var link = -1 == repo.indexOf("//") ? "https://raw.githubusercontent.com/simpl-e/simple-e/master/" + repo : repo;
+        var linkArr = link.replace("raw.githubusercontent.com", "github.com").split("/");
+        linkArr.splice(-2, 0, "blob");
+        var link = linkArr.join("/");
+        $("#link").html("original in: <a href='" + link + "'>" + link + "</a>");
       });
     }
 
@@ -240,7 +249,6 @@
 
         //GITHUB TO RAWGIT
         if (href.indexOf("//github.com")) {
-          $("#link").text("original in " + href);
           href = href.replace("github.com", "raw.githubusercontent.com").replace("/blob", "");
         }
 

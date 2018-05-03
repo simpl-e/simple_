@@ -126,7 +126,7 @@ require(["vue!modal.html"], function (Modal) {
     <style>
         /* ESTILOS DEL VIEW */
     </style>
-    <script data-main="../src/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js"></script>
+    <script data-main="../src/main" src="[..]/require.js"></script>
 </head>
 
 <body>

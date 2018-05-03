@@ -119,7 +119,7 @@ require(["vue!modal.html"], function (Modal) {
 ```
 
 ## Vue independiente
-### Uso Vue sin usar enrutador
+### Utilizar Vue sin usar enrutador
 
 ```html
 <head>
@@ -131,14 +131,14 @@ require(["vue!modal.html"], function (Modal) {
 
 <body>
     <div id='view_home'>
-        <!-- evita que se vea código vue antes de compilar -->
+        <!--oculta código vue antes de compilar-->
         <template>
             <!-- HTML -->
         </template>
     </div>
 
-    <script>        
-        //LLAMAR AQUÍ EN VEZ DEL ENRUTADOR AL FINALIZAR LA CARGA
+    <script>
+        //SUSTITUYE AL ROUTER AL CARGAR main.js
         window.router_override = function () {            
             window.vm = new Vue({
                 el: "#view_home",

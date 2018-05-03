@@ -116,5 +116,35 @@ require(["vue!modal.html"], function (Modal) {
   // DEFINIR COMPONENTE VUE CONTENIDO
   vm.page = "modules/views/login/login.html";
 });
+```
 
+## Vue independiente
+### Uso Vue sin usar enrutador
+
+```html
+<head>
+    <style>
+        /* ESTILOS DEL VIEW */
+    </style>
+    <script data-main="../src/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js"></script>
+</head>
+
+<body>
+    <div id='view_home'>
+        <!-- evita que se vea código vue antes de compilar -->
+        <template>
+            <!-- HTML -->
+        </template>
+    </div>
+
+    <script            
+        // LLAMAR AQUÍ EN VEZ DEL ENRUTADOR AL FINALIZAR LA CARGA
+        window.router_override = function () {            
+            window.vm = new Vue({
+                el: "#view_home",
+                // RESTO DEL VUE
+            });
+        };
+    </script>
+</body>
 ```

@@ -137,8 +137,8 @@ require(["vue!modal.html"], function (Modal) {
         </template>
     </div>
 
-    <script            
-        // LLAMAR AQUÍ EN VEZ DEL ENRUTADOR AL FINALIZAR LA CARGA
+    <script>        
+        //LLAMAR AQUÍ EN VEZ DEL ENRUTADOR AL FINALIZAR LA CARGA
         window.router_override = function () {            
             window.vm = new Vue({
                 el: "#view_home",

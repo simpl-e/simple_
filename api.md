@@ -16,6 +16,14 @@ $router->get('{class}'
   return $controller->get($request);
 });
 
+$router->get('{class}/get{method}'
+    , function ($request, $class, $method) {
+  $controller=app()->make("App\\Http\\Controllers\\" 
+  . ucwords($class) . "Controller");
+  $getMethod = "get$method";
+  return $controller->$getMethod($request);
+});
+
 $router->get('{class}/{id}'
     , function ($request, $class, $id) {
   $controller=app()->make("App\\Http\\Controllers\\"
@@ -73,6 +81,9 @@ $router->post('{class}/{method}'
 // function get(Request $request) {
 axios.get("user");
 
+// function get[..](Request $request) {
+axios.get("user/get[ID]");
+
 // function first(Request $request) {
 axios.get("user/[ID]");
 
@@ -96,6 +107,9 @@ axios.delete("user/[ID]");
 ```php
 // function get(Request $request) {
 $client->get("user");
+
+// function get[..](Request $request) {
+$client->get("user/get[..]");
 
 // function first(Request $request) {
 $client->get("user/[ID]");

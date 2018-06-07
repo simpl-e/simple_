@@ -25,8 +25,24 @@ cordova run android --device
 
 ## Crear App que solo redirecciona a una web
 ```html
-<!-- https://stackoverflow.com/a/38325627/2075591 -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://iframe url">
+<head>
+    <!-- https://stackoverflow.com/a/38325627/2075591 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://iframe url">
+    
+    <style>
+        html, body{
+            margin: 0;
+        }
+        iframe{
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
 
 <iframe id="iframe" src="[URL]"></iframe>
 

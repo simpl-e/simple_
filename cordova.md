@@ -27,7 +27,7 @@ cordova run android --device
 ```html
 <head>
     <!-- https://stackoverflow.com/a/38325627/2075591 -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://iframe url">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *"/>    
     
     <style>
         html, body{
